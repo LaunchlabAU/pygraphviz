@@ -1304,7 +1304,7 @@ class AGraph(object):
         runprog = r'"%s"' % self._get_prog(prog)
         cmd = ' '.join([runprog, args])
         dotargs = shlex.split(cmd)
-        p = subprocess.Popen(dotargs,
+        p = subprocess.Popen(cmd,
                              shell=True,
                              stdin=subprocess.PIPE,
                              stdout=subprocess.PIPE,
