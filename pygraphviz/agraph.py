@@ -1305,7 +1305,7 @@ class AGraph(object):
         cmd = ' '.join([runprog, args])
         dotargs = shlex.split(cmd)
         p = subprocess.Popen(dotargs,
-                             shell=False,
+                             shell=True,
                              stdin=subprocess.PIPE,
                              stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE,
